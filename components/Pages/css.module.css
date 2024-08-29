@@ -1,0 +1,10 @@
+@font-face {
+    font-family: vrz;
+    src: url("https://irmapserver.ir/qepal/fonts/vz.woff");
+  }
+
+.test{
+    width: 150ps;
+    height: 200px;
+    background-color: chartreuse;
+}
