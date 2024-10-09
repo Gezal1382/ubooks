@@ -116,13 +116,14 @@ const Page: PageEl = (props, state, refresh, getProps) => {
           </g-b>
 
 
-          <g-b style={{ height: 40, backgroundColor: "lab(3.25 -3.45 2.3)", color: "white" }} onClick={() => {
+          <g-b style={{ height: 40, backgroundColor: "lab(3.25 -3.45 2.3)", color: "white" }} onClick={async() => {
             if (!state.cart) {
               state.cart = []
             }
             if (state.cart.includes(state.book.title)) {
               state.cart = state.cart.filter(item => item !== state.book.title)
               state.form = null
+              await api("/api/test",state.cart)
             }
             else {
               state.cart.push(state.book.title)
